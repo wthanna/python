@@ -9,7 +9,7 @@ class Television:
     MIN_CHANNEL: int = 0
     MAX_CHANNEL: int = 3
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Method to set values of television object
         """
@@ -21,14 +21,12 @@ class Television:
     def power(self) -> None:
         """
         function to revers status
-        :return: None
         """
         self.__status = not self.__status
 
     def mute(self) -> None:
         """
         function to revers mute
-        :return: None
         """
         if self.__status:
             self.__muted = not self.__muted
@@ -36,7 +34,6 @@ class Television:
     def channel_up(self) -> None:
         """
         function to increase channel by one
-        :return: None
         """
         if self.__status:
             if self.__channel < Television.MAX_CHANNEL:
@@ -48,7 +45,6 @@ class Television:
     def channel_down(self) -> None:
         """
         function to decrease channel by one
-        :return: None
         """
         if self.__status:
             if self.__channel > Television.MIN_CHANNEL:
@@ -59,7 +55,6 @@ class Television:
     def volume_up(self) -> None:
         """
         function to increase volume by one
-        :return: None
         """
         if self.__status:
             if self.__volume < Television.MAX_VOLUME:
@@ -73,7 +68,6 @@ class Television:
     def volume_down(self) -> None:
         """
         function to decrease volume by one
-        :return: None
         """
         if self.__status:
             if self.__volume > Television.MIN_VOLUME:
